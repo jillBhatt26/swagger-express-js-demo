@@ -1,6 +1,6 @@
 // swagger.js
 const swaggerJsdoc = require('swagger-jsdoc');
-const { HOST } = require('./config');
+const { HOST, NODE_ENV } = require('./config');
 
 // swagger options
 const options = {
@@ -16,6 +16,9 @@ const options = {
         //     url: HOST,
         //     email: 'info@email.com'
         // },
+        HOST,
+        basePath: '/',
+        schemes: NODE_ENV === 'development' ? 'http' : 'https',
         servers: [
             {
                 url: HOST
