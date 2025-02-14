@@ -1,6 +1,6 @@
 // swagger.js
 const swaggerJsdoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
+const { HOST } = require('./config');
 
 // swagger options
 const options = {
@@ -13,12 +13,12 @@ const options = {
         },
         contact: {
             name: 'John Doe',
-            url: 'https://localhost:5000',
+            url: HOST,
             email: 'info@email.com'
         },
         servers: [
             {
-                url: 'http://localhost:5000'
+                url: HOST
             }
         ]
     },
