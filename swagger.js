@@ -16,8 +16,14 @@ const options = {
         //     url: HOST,
         //     email: 'info@email.com'
         // },
+        host: HOST,
         basePath: '/',
-        schemes: NODE_ENV === 'development' ? 'http' : 'https'
+        schemes: NODE_ENV === 'development' ? 'http' : 'https',
+        servers: [
+            {
+                url: HOST
+            }
+        ]
     },
     apis: ['./docs.js'] // Path to your API routes
 };
