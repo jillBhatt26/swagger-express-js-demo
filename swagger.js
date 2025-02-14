@@ -16,8 +16,6 @@ const options = {
         //     url: HOST,
         //     email: 'info@email.com'
         // },
-        host: HOST,
-        basePath: '/',
         schemes: NODE_ENV === 'development' ? 'http' : 'https',
         servers: [
             {
