@@ -11,7 +11,12 @@ const options = {
             version: '1.0.0',
             description: 'A simple Express API with Swagger documentation'
         },
-        schemes: NODE_ENV === 'development' ? 'http' : 'https'
+        schemes: NODE_ENV === 'development' ? 'http' : 'https',
+        servers: [
+            {
+                url: `https://${HOST}`
+            }
+        ]
     },
     apis: ['./docs.js'] // Path to your API routes
 };
