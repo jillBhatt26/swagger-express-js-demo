@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(appRoutes);
+app.use('/', appRoutes);
 
 app.set('trust proxy', 1);
 
