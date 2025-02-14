@@ -11,17 +11,7 @@ const options = {
             version: '1.0.0',
             description: 'A simple Express API with Swagger documentation'
         },
-        // contact: {
-        //     name: 'John Doe',
-        //     url: HOST,
-        //     email: 'info@email.com'
-        // },
-        schemes: NODE_ENV === 'development' ? 'http' : 'https',
-        servers: [
-            {
-                url: HOST
-            }
-        ]
+        schemes: NODE_ENV === 'development' ? 'http' : 'https'
     },
     apis: ['./docs.js'] // Path to your API routes
 };
